@@ -21,7 +21,7 @@ export const defaultTasksData = [
 ]
 
 export const withPinnedTasksData = [
-    ...defaultTasksData.slice(0,5),
+    ...defaultTasksData.slice(0,defaultTasksData.length-1),
     {id:'6', title: 'Task 6 (pinned)', state: 'TASK_PINNED'},
 ]
 
