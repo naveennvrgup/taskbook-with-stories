@@ -1,10 +1,10 @@
 import React from 'react'
 import {taskData, actionData} from './Task.stories'
-import TaskList from './TaskList'
+import {PureTaskList} from './TaskList'
 
 
 export default {
-    component: TaskList,
+    component: PureTaskList,
     title: 'TaskList',
     decorators: [story => <div style={{padding: '3rem'}}>{story()}</div>],
     excludeStories: /.*Data$/,
@@ -26,7 +26,7 @@ export const withPinnedTasksData = [
 ]
 
 
-export const Default = () => <TaskList tasks={defaultTasksData} {...actionData} />
-export const WithPinnedTasks = () => <TaskList tasks={withPinnedTasksData} {...actionData}/>
-export const Loading = () => <TaskList loading tasks={[]} {...actionData}/>
-export const Empty = () => <TaskList tasks={[]} {...actionData}/>
+export const Default = () => <PureTaskList tasks={defaultTasksData} {...actionData} />
+export const WithPinnedTasks = () => <PureTaskList tasks={withPinnedTasksData} {...actionData}/>
+export const Loading = () => <PureTaskList loading tasks={[]} {...actionData}/>
+export const Empty = () => <PureTaskList tasks={[]} {...actionData}/>
